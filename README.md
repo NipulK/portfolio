@@ -34,10 +34,9 @@ npm test
 | --- | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Production | Canonical URL and sitemap origin |
 | `GITHUB_TOKEN` | No | Server-only token for higher GitHub API limits |
-| `CONTACT_EMAIL` | Contact form | Server-only recipient address |
-| `WEB3FORMS_ACCESS_KEY` | Contact form | Server-only Web3Forms key |
+| `WEB3FORMS_ACCESS_KEY` | Contact form | Web3Forms key connected to your receiving email |
 
-Never prefix secrets with `NEXT_PUBLIC_`. Without contact variables, the form displays a clear configuration message and social links remain usable. The in-memory limiter is appropriate as a lightweight guard; for higher-volume production use, replace it with a durable store such as Vercel KV or Upstash.
+Create the key at [Web3Forms](https://web3forms.com/) using the email address that should receive portfolio messages. Add it to `.env.local` when developing and to your hosting provider's environment variables in production, then restart or redeploy. Never prefix the key with `NEXT_PUBLIC_`. Without it, the form displays a clear configuration message and social links remain usable. The in-memory limiter is appropriate as a lightweight guard; for higher-volume production use, replace it with a durable store such as Vercel KV or Upstash.
 
 ## Content editing
 
@@ -79,7 +78,7 @@ Create a Web3Forms access key, set the recipient variables, and redeploy. The AP
 ## Troubleshooting
 
 - GitHub values showing dashes: check GitHub rate limits and optionally add `GITHUB_TOKEN`.
-- Contact returns 503: configure both contact environment variables.
+- Contact returns 503: configure `WEB3FORMS_ACCESS_KEY` and restart or redeploy.
 - Wrong canonical URLs: set `NEXT_PUBLIC_SITE_URL` without a trailing slash and rebuild.
 - A skill icon falls back: confirm the exact React Icons export name.
 - Font fetching fails during a restricted offline build: rerun with network access; Next.js bundles the fonts at build time.
