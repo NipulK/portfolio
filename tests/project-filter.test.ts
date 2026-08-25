@@ -1,0 +1,2 @@
+import { describe,expect,it } from "vitest";import { filterProjects } from "@/lib/project-filter";import { projects } from "@/data/projects";
+describe("project filtering",()=>{it("combines category and technology search",()=>{const result=filterProjects(projects,"Swift","Mobile");expect(result.map(x=>x.name)).toEqual(expect.arrayContaining(["SmartGarage","Color Match Game"]))});it("returns an empty list for no matches",()=>{expect(filterProjects(projects,"COBOL mainframe","All")).toHaveLength(0)})});

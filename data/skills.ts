@@ -1,0 +1,9 @@
+import type { Skill } from "@/types";
+export const skills: Skill[] = [
+  {name:"TypeScript",category:"Languages",color:"#3178C6",icon:"SiTypescript"},{name:"JavaScript",category:"Languages",color:"#F7DF1E",icon:"SiJavascript"},{name:"Python",category:"Languages",color:"#3776AB",icon:"SiPython"},{name:"Swift",category:"Languages",color:"#F05138",icon:"SiSwift"},{name:"Java",category:"Languages",color:"#ED8B00",icon:"FaJava"},{name:"C++",category:"Languages",color:"#00599C",icon:"SiCplusplus"},{name:"Kotlin",category:"Languages",color:"#7F52FF",icon:"SiKotlin"},{name:"Dart",category:"Languages",color:"#0175C2",icon:"SiDart"},
+  {name:"HTML5",category:"Frontend",color:"#E34F26",icon:"SiHtml5"},{name:"CSS3",category:"Frontend",color:"#1572B6",icon:"SiCss3"},{name:"Vue.js",category:"Frontend",color:"#4FC08D",icon:"SiVuedotjs"},{name:"Nuxt",category:"Frontend",color:"#00DC82",icon:"SiNuxt"},{name:"Astro",category:"Frontend",color:"#BC52EE",icon:"SiAstro"},{name:"Streamlit",category:"Frontend",color:"#FF4B4B",icon:"SiStreamlit"},
+  {name:"Node.js",category:"Backend",color:"#5FA04E",icon:"SiNodedotjs"},{name:"Express",category:"Backend",color:"#888888",icon:"SiExpress"},{name:"Prisma",category:"Backend",color:"#2D3748",icon:"SiPrisma"},{name:"Mongoose",category:"Backend",color:"#880000",icon:"SiMongoose"},
+  {name:"SwiftUI",category:"Mobile",color:"#0D96F6",icon:"SiSwift"},{name:"Flutter",category:"Mobile",color:"#02569B",icon:"SiFlutter"},{name:"Firebase",category:"Mobile",color:"#FFCA28",icon:"SiFirebase"},
+  {name:"MySQL",category:"Databases",color:"#4479A1",icon:"SiMysql"},{name:"MongoDB",category:"Databases",color:"#47A248",icon:"SiMongodb"},{name:"SQLite",category:"Databases",color:"#003B57",icon:"SiSqlite"},
+  {name:"Git",category:"Tools",color:"#F05032",icon:"SiGit"},{name:"GitHub",category:"Tools",color:"#8B8B8B",icon:"SiGithub"},{name:"Docker",category:"Tools",color:"#2496ED",icon:"SiDocker"}
+];

@@ -1,0 +1,2 @@
+import { render,screen } from "@testing-library/react";import { describe,expect,it } from "vitest";import { ProjectCard } from "@/components/project-card";import { projects } from "@/data/projects";
+describe("external project links",()=>{it("uses secure new-tab attributes",()=>{render(<ProjectCard project={projects[0]}/>);const link=screen.getByRole("link",{name:"Repository"});expect(link).toHaveAttribute("target","_blank");expect(link).toHaveAttribute("rel","noreferrer")})});

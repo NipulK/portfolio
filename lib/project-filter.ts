@@ -1,0 +1,2 @@
+import type { Project } from "@/types";
+export function filterProjects(projects:Project[],query:string,category:string){const term=query.trim().toLowerCase();return projects.filter(project=>{const matchesCategory=category==="All"||project.category.includes(category as never)||project.language===category;const haystack=[project.name,project.language,...project.technologies,...project.category].join(" ").toLowerCase();return matchesCategory&&(!term||haystack.includes(term))})}

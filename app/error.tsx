@@ -1,0 +1,1 @@
+"use client";export default function ErrorPage({reset}:{reset:()=>void}){return <main className="center-page"><p className="eyebrow">Something went wrong</p><h1>The page could not be loaded.</h1><button className="button primary" onClick={reset}>Try again</button></main>}

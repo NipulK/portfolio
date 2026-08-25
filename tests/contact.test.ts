@@ -1,0 +1,2 @@
+import { describe,expect,it } from "vitest";import { contactSchema } from "@/lib/contact";
+describe("contact validation",()=>{it("accepts valid input",()=>{expect(contactSchema.safeParse({name:"Ada",email:"ada@example.com",subject:"Hello",message:"A useful message for Nipul.",company:""}).success).toBe(true)});it("rejects invalid email and short messages",()=>{expect(contactSchema.safeParse({name:"A",email:"bad",subject:"x",message:"tiny",company:""}).success).toBe(false)})});
